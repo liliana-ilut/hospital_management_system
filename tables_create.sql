@@ -4,26 +4,30 @@ VALUES
 	('suresh@gmail.com','hrishikesh13','Suresh','Karnataka', 'male'),
 	('rakesh@gmail.com','hrishikesh13','Rakesh','Gujarat', 'male')
 ;
+--select * from Patient;
 
 INSERT INTO MedicalHistory(id,date,conditions,surgeries,medication)
 VALUES
-	(1,'19-01-14','Pain in abdomen','Heart Surgery','Crocin'),
-	(2,'19-01-14','Frequent Indigestion','none','none'),
-	(3,'19-01-14','Body Pain','none','Iodex')
+	(1,'2019-01-14','Pain in abdomen','Heart Surgery','Crocin'),
+	(2,'2019-01-14','Frequent Indigestion','none','none'),
+	(3,'2019-01-14','Body Pain','none','Iodex')
 ;
+--select * from MedicalHistory;
 
 INSERT INTO Doctor(email, gender, password, name)
 VALUES
 	('hathalye7@gmail.com', 'male', 'hrishikesh13', 'Hrishikesh Athalye'),
 	('hathalye8@gmail.com', 'male', 'hrishikesh13', 'Hrishikesh Athalye')
 ;
+--select * from Doctor;
 
 INSERT INTO Appointment(id,date,starttime,endtime,status)
 VALUES
-	(1, '19-01-15', '09:00', '10:00', 'Done'),
-	(2, '19-01-16', '10:00', '11:00', 'Done'),
-	(3, '19-01-18', '14:00', '15:00', 'Done')
+	(1, '2019-01-15', '09:00', '10:00', 'Done'),
+	(2, '2019-01-16', '10:00', '11:00', 'Done'),
+	(3, '2019-01-18', '14:00', '15:00', 'Done')
 ;
+--select * from Appointment;
 
 INSERT INTO PatientsAttendAppointments(patient,appt,concerns,symptoms)
 VALUES
@@ -31,6 +35,7 @@ VALUES
 	('suresh@gmail.com',2, 'infection', 'fever'),
 	('rakesh@gmail.com',3, 'nausea', 'fever')
 ;
+--select * from PatientsAttendAppointments;
 
 INSERT INTO Schedule(id,starttime,endtime,breaktime,day)
 VALUES
@@ -41,6 +46,7 @@ VALUES
 	(002,'09:00','17:00','12:00','Wednesday'),
 	(002,'09:00','17:00','12:00','Friday')
 ;
+--select * from Schedule;
 
 INSERT INTO PatientsFillHistory(patient,history)
 VALUES
@@ -48,6 +54,7 @@ VALUES
 	('suresh@gmail.com', 2),
 	('rakesh@gmail.com', 3)
 ;
+--select * from PatientsFillHistory;
 
 INSERT INTO Diagnose(appt,doctor,diagnosis,prescription)
 VALUES
@@ -56,11 +63,14 @@ VALUES
 	(3,'hathalye8@gmail.com', 'Vitamin Deficiency', 'Good Diet')
 ;
 
+--select * from Diagnose;
+
 INSERT INTO DocsHaveSchedules(sched,doctor)
 VALUES
 	(001,'hathalye7@gmail.com'),
 	(002,'hathalye8@gmail.com')
 ;
+--select * from DocsHaveSchedules;
 
 INSERT INTO DoctorViewsHistory(history,doctor)
 VALUES
@@ -68,3 +78,5 @@ VALUES
 	(2,'hathalye8@gmail.com'),
 	(3,'hathalye8@gmail.com')
 ;
+
+--select * from DoctorViewsHistory;
